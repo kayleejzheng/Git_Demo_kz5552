@@ -5,12 +5,14 @@ author: "Kaylee Zheng, EID: kz5552"
 date: "2026-10-26"
 ---
 
-## Load Packages
+## Load Packages & Data
 
 ```{r}
 library(tidyverse)
 library(palmerpenguins)
 library(dplyr)
+
+glimpse(penguins)
 ```
 
 ## Summary Table of Average Bill Length by Species
