@@ -1,0 +1,32 @@
+---
+title: "my_penguins.qmd"
+author: "Kaylee Zheng, EID: kz5552"
+---
+
+# My Penguins Quarto (Git Demo)
+
+## Load Packages
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+library(dplyr)
+```
+
+## Summary Table of Average Bill Length by Species
+
+```{r}
+data_summary <- penguins |>
+  group_by(species) |>
+  summarize(
+    avg_bill_length = mean(bill_length_mm, na.rm = TRUE)
+  )
+
+data_summary
+```
+
+## Average Bill Length by Species Plot
+
+```{r}
+
+```
