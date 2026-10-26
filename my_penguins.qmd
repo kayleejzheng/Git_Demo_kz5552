@@ -1,9 +1,9 @@
 ---
-title: "my_penguins.qmd"
+title: "My Penguins Quarto (my_penguins.qmd)"
+subtitle: "In-Class Activity: 10/26/2026"
 author: "Kaylee Zheng, EID: kz5552"
+date: "2026-10-26"
 ---
-
-# My Penguins Quarto (Git Demo)
 
 ## Load Packages
 
@@ -25,8 +25,18 @@ data_summary <- penguins |>
 data_summary
 ```
 
-## Average Bill Length by Species Plot
+## Plot of Average Bill Length by Species
 
 ```{r}
-
+data_summary |>
+  ggplot(
+    mapping = aes(x = species, y = avg_bill_length)
+  ) +
+  geom_col(fill = "pink") +
+  labs(
+    title = "Average Bill Length by Penguin Species",
+    x = "Species Name",
+    y = "Average Bill Length (mm)"
+  ) +
+  theme_minimal()
 ```
